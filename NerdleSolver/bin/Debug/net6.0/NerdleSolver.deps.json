@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "NerdleSolver/1.0.0": {
+        "dependencies": {
+          "NerdleCalculator": "1.0.0"
+        },
+        "runtime": {
+          "NerdleSolver.dll": {}
+        }
+      },
+      "NerdleCalculator/1.0.0": {
+        "runtime": {
+          "NerdleCalculator.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NerdleSolver/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NerdleCalculator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

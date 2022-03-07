@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "NerdleCalculator/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/NerdleCalculator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NerdleCalculator.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "NerdleCalculator/1.0.0": {
+      "type": "project",
+      "path": "../NerdleCalculator/NerdleCalculator.csproj",
+      "msbuildProject": "../NerdleCalculator/NerdleCalculator.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "NerdleCalculator >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\mvinc\\.nuget\\packages\\": {},
@@ -37,7 +56,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Code\\Nerdle\\NerdleCalculator\\NerdleCalculator.csproj": {
+              "projectPath": "C:\\Code\\Nerdle\\NerdleCalculator\\NerdleCalculator.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

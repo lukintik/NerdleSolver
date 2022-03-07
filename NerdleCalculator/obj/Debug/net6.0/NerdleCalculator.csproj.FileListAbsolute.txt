@@ -1,0 +1,12 @@
+C:\Code\Nerdle\NerdleCalculator\obj\Debug\net6.0\NerdleCalculator.csproj.AssemblyReference.cache
+C:\Code\Nerdle\NerdleCalculator\obj\Debug\net6.0\NerdleCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\Nerdle\NerdleCalculator\obj\Debug\net6.0\NerdleCalculator.AssemblyInfoInputs.cache
+C:\Code\Nerdle\NerdleCalculator\obj\Debug\net6.0\NerdleCalculator.AssemblyInfo.cs
+C:\Code\Nerdle\NerdleCalculator\obj\Debug\net6.0\NerdleCalculator.csproj.CoreCompileInputs.cache
+C:\Code\Nerdle\NerdleCalculator\bin\Debug\net6.0\NerdleCalculator.deps.json
+C:\Code\Nerdle\NerdleCalculator\bin\Debug\net6.0\NerdleCalculator.dll
+C:\Code\Nerdle\NerdleCalculator\bin\Debug\net6.0\ref\NerdleCalculator.dll
+C:\Code\Nerdle\NerdleCalculator\bin\Debug\net6.0\NerdleCalculator.pdb
+C:\Code\Nerdle\NerdleCalculator\obj\Debug\net6.0\NerdleCalculator.dll
+C:\Code\Nerdle\NerdleCalculator\obj\Debug\net6.0\ref\NerdleCalculator.dll
+C:\Code\Nerdle\NerdleCalculator\obj\Debug\net6.0\NerdleCalculator.pdb
