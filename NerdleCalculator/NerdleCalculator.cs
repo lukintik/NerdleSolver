@@ -18,7 +18,6 @@ namespace NerdleCalculator
 
         public static bool ValidateCalculationInput(string input)
         {
-            Stack<char> operators = new Stack<char>();
             int answer = ExtractAnswerFromInput(input);
             string calculation = input.Split('=')[0];
             string[] numbers = calculation.Split(Operators);
@@ -26,7 +25,6 @@ namespace NerdleCalculator
             List<NumberOperation> operation = new List<NumberOperation>();
             List<CalculationInput> storage = new List<CalculationInput>();
             int index = 0;
-            StringBuilder builder = new StringBuilder(calculation);
 
             foreach (char item in calculation)
             {

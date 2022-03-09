@@ -13,13 +13,20 @@ namespace Wordle
         {
             Console.WriteLine("Hello Nerdle");
             string answer = "10+2-3=7";
-            string? input = Console.ReadLine();
+            
             int inputTries = 0;
             while(inputTries <= NumberOfTries)
             {
+                Console.WriteLine("Enter Your Guess:");
+                string? input = Console.ReadLine().Trim();
                 if (string.IsNullOrEmpty(input) && input.Count() < MaxNumberOfCharacter)
                 {
                     Console.WriteLine("NOT A VALID INPUT");
+                }
+                else if(input == answer)
+                {
+                    Console.WriteLine("You solved the nerdle");
+                    break;
                 }
                 else
                 {
@@ -27,6 +34,7 @@ namespace Wordle
                     if (isValidCalculation)
                     {
                         Console.WriteLine("Correct calculation");
+                        inputTries++;
                     }
                     else
                     {
