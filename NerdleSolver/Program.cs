@@ -1,4 +1,6 @@
 ﻿using NerdleCalculator;
+using System;
+using System.Linq;
 
 namespace Wordle
 {
@@ -9,19 +11,29 @@ namespace Wordle
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Wordle");
+            Console.WriteLine("Hello Nerdle");
             string answer = "10+2-3=7";
             string? input = Console.ReadLine();
-
-            if(string.IsNullOrEmpty(input) && input.Count() < MaxNumberOfCharacter)
+            int inputTries = 0;
+            while(inputTries <= NumberOfTries)
             {
-                Console.WriteLine("NOT A VALID INPUT");
+                if (string.IsNullOrEmpty(input) && input.Count() < MaxNumberOfCharacter)
+                {
+                    Console.WriteLine("NOT A VALID INPUT");
+                }
+                else
+                {
+                    bool isValidCalculation = NerdleCalculator.NerdleCalculator.ValidateCalculationInput(input);
+                    if (isValidCalculation)
+                    {
+                        Console.WriteLine("Correct calculation");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Wrong calculation");
+                    }
+                }
             }
-            else
-            {
-                NerdleCalculator.NerdleCalculator.ValidateCalculationInput(input);
-            }
-
         }
     }
 }
