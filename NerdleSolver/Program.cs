@@ -19,11 +19,11 @@ namespace Wordle
             {
                 Console.WriteLine("Enter Your Guess:");
                 string? input = Console.ReadLine().Trim();
-                if (string.IsNullOrEmpty(input) && input.Count() < MaxNumberOfCharacter)
-                {
-                    Console.WriteLine("NOT A VALID INPUT");
-                }
-                else if(input == answer)
+                //if (string.IsNullOrEmpty(input) && input.Count() < MaxNumberOfCharacter)
+                //{
+                //    Console.WriteLine("NOT A VALID INPUT");
+                //}
+                if(input == answer)
                 {
                     Console.WriteLine("You solved the nerdle");
                     break;
@@ -34,6 +34,8 @@ namespace Wordle
                     if (isValidCalculation)
                     {
                         Console.WriteLine("Correct calculation");
+                        var checkResult = NerdleValidator.CheckAnswer(input, answer);
+                        DisplayNumberResult(checkResult);
                         inputTries++;
                     }
                     else
@@ -41,6 +43,14 @@ namespace Wordle
                         Console.WriteLine("Wrong calculation");
                     }
                 }
+            }
+        }
+
+        private static void DisplayNumberResult(List<NumberResult> result)
+        {
+            foreach(NumberResult item in result)
+            {
+                Console.WriteLine($"{item.index} : {item.Input} : {item.Status}");
             }
         }
     }

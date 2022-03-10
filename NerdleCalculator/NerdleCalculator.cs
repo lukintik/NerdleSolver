@@ -10,8 +10,8 @@ namespace NerdleCalculator
         private const int operatorSize = 4;
 
         public static char[] Operators => new char[operatorSize] { '+', '-', '*', '/' };
-        public static string[] Operators1 => new string[2] { "*", "/" };
-        public static string[] Operators2 => new string[2] { "+", "-" };
+        public static string[] MultiDivOperators => new string[2] { "*", "/" };
+        public static string[] PlusMinusOperators => new string[2] { "+", "-" };
 
 
         const char Equal = '=';
@@ -56,10 +56,11 @@ namespace NerdleCalculator
             int finalResult = 0;
             var operatorList = storage.Where(x => x.isOperand).ToList();
             bool isReverseOrder = false;
+            List<CalculationInput> newOperandList = new List<CalculationInput>();
 
             if (
-                storage.FirstOrDefault(x => Operators1.Contains(x.input))?.index >
-               storage.FirstOrDefault(x => Operators2.Contains(x.input))?.index)
+                storage.FirstOrDefault(x => MultiDivOperators.Contains(x.input))?.index >
+               storage.FirstOrDefault(x => PlusMinusOperators.Contains(x.input))?.index)
             {
                 operatorList = operatorList.OrderByDescending(x => x.index).ToList();
                 isReverseOrder = true;
